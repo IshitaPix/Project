@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Allocation</title>
+</head>
+<body>
+    <h1>Budget Allocation</h1>
+    <form action="/predict" method="POST">
+        <label for="budget">Enter your total budget:</label>
+        <input type="number" id="budget" name="budget" required><br><br>
+        
+        <label for="first">Select your first priority category:</label>
+        <select id="first" name="first">
+            <!--<option value="Gifts">Gifts</option>
+            <option value="Healthy">Healthy</option>
+            <option value="Junk">Junk</option> -->
+            <!-- Add other feature options here -->
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select><br><br>
+        
+        <label for="second">Select your second priority category:</label>
+        <select id="second" name="second">
+            <!--<option value="Gifts">Gifts</option>
+            <option value="Healthy">Healthy</option>
+            <option value="Junk">Junk</option> -->
+            <!-- Add other feature options here -->
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select><br><br>
+        
+        <label for="third">Select your third priority category:</label>
+        <select id="third" name="third">
+            <!--<option value="Gifts">Gifts</option>
+            <option value="Healthy">Healthy</option>
+            <option value="Junk">Junk</option> -->
+            <!-- Add other feature options here -->
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select><br><br>
+        
+        <button type="submit">Allocate Budget</button>
+    </form>
+</body>
+</html>

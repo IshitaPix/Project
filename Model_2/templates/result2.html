@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allocation Result</title>
+</head>
+<body>
+    <h1>Budget Allocation Result</h1>
+    <h2>Allocated Budget for Each Feature:</h2>
+    <ul>
+        {% for feature, amount in allocated_budget.items() %}
+            <li>{{ feature }}: {{ "%.2f"|format(amount) }}</li>
+        {% endfor %}
+    </ul>
+    <!--<h2>Predicted Total Budget: {{ predicted_total_budget }}</h2> -->
+</body>
+</html>
