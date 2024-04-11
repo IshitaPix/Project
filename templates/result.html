@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Prediction Result</title>
+</head>
+<body>
+    <h1>Budget Distribution</h1>
+    <p>Total Predicted Budget: {{ '%.2f' % total_budget }}</p>
+    <h2>Category-wise Budget</h2>
+    <ul>
+        {% for category, budget in categories_budget.items() %}
+            <li>{{ category }}: {{ '%.2f' % budget }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
